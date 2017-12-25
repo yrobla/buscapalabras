@@ -13,3 +13,17 @@
 .statusbar-overlay {
     background: #000000;
 }
+
+@font-face {
+    font-family: "Lemonade";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), url("/fonts/Lemonade Stand D.otf") format("truetype");
+}
+
+body {
+	font-family: Lemonade !important;	
+}
+input {
+	font-size:20px !important;
+}
