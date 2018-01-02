@@ -15,15 +15,42 @@
 }
 
 @font-face {
-    font-family: "Lemonade";
-    font-style: normal;
-    font-weight: normal;
-    src: local("?"), url("/fonts/Lemonade Stand D.otf") format("truetype");
+  font-family: 'hastoler';
+  src: url('../fonts/Hastoler Regular.otf')
+  format('opentype');
 }
 
 body {
-	font-family: Lemonade !important;	
+	font-family: 'hastoler' !important;
+	font-size: 24px !important;
 }
 input {
-	font-size:20px !important;
+	font-size:24px !important;
+}
+
+.chip {
+	font-size: 18px !important;
+}
+
+input.enter-letters {
+  border-bottom: 1px solid #2196f3 !important;
+  letter-spacing: .5ch !important;
+  width:11ch !important;
+  text-transform: uppercase;
+}
+input.enter-char {
+	background: lavender !important;
+  width: 2ch !important;
+  float: left !important;
+  margin: 0.2ch !important;
+  text-align:center !important;
+  text-transform: uppercase;
+}
+
+.marker {
+	margin: 0.5em !important;
+}
+
+.list-block .label {
+	width: 20% !important;
 }

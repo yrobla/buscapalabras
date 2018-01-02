@@ -34,6 +34,8 @@
 </head>
 
 <body class="theme-blue">
+    <div class="modal-overlay"></div>
+
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
 
@@ -58,6 +60,8 @@
                     <!-- Scrollable page content -->
                     <div class="page-content">
 						<div class="content-block-title">Buscapalabras</div>
+						
+						
 						<div class="list-block">
 						<form id="form-palabra" class="list-block ajax-submit" method="POST">
 						
@@ -65,26 +69,45 @@
 						    <!-- Text inputs -->
 						    <li>
 						      <div class="item-content">
-								<div class="item-media"><i class="icon f7-icons">favorites</i></div>						      
 						        <div class="item-inner">
-						          <div class="item-title label">Introduce tu palabra</div>
+						          <div class="item-title label ">Letras</div>
 						          <div class="item-input">
-						            <input type="text" name="word" placeholder="" id="word" >
+						            <input type="text" name="chars" placeholder="" id="chars" maxlength="7" size="7" class="enter-letters">
 						          </div>
 						        </div>
 						      </div>
 						    </li>
 						    <li>
 						      <div class="item-content">
-								<div class="item-media"><i class="icon f7-icons">favorites</i></div>						      
 						        <div class="item-inner">
-						          <div class="item-title label">Introduce la longitud</div>
+						          <div class="item-title label">Patrón</div>
 						          <div class="item-input">
-						          	<div class="range-slider">
-						            <input type="range" name="longitud" id="longitud" min="1" max="7" step="1">
+						            <input type="text" name="mask1" placeholder="" id="mask1" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask2" placeholder="" id="mask2" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask3" placeholder="" id="mask3" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask4" placeholder="" id="mask4" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask5" placeholder="" id="mask5" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask6" placeholder="" id="mask6" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask7" placeholder="" id="mask7" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask8" placeholder="" id="mask8" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask9" placeholder="" id="mask9" maxlength="1" size="1" class="enter-char" value="">
+						            <input type="text" name="mask10" placeholder="" id="mask10" maxlength="1" size="1" class="enter-char" value="">
 						          </div>
 						        </div>
 						      </div>
+						    </li>
+						    
+						    <li>
+						      <div class="item-content">
+						        <div class="item-inner">
+						          <div class="item-title label">Longitud</div>
+									<div class="item-input">
+									    <div class="range-slider">
+									      <input type="range" min="3" max="10" step="1" value="4" id="longitud">
+									    </div>
+									</div>  
+							      </div>
+								</div>
 						    </li>
 						    
                     	</ul>
@@ -94,22 +117,31 @@
 						</div>                    	
                     	</form>
                     	</div>
-                    	
-						<!-- Virtual List -->
-						<div class="list-block virtual-list">
+                    	                    	
+						<div class="content-block">
+						<div id="chips_container_dict" class="content-block">
 						  <!-- keep it empty -->
-						</div>                    	
+						</div></div>
+						
+						<div class="content-block">
+						<div id="chips_container_possible" class="content-block">
+						  <!-- keep it empty -->
+						</div></div>                    	
+						                    	
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
     </div>
 
-
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/combinaciones.js"></script>
+    <script type="text/javascript" src="js/trie.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
+    
 </body>
 
 </html>
