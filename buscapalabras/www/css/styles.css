@@ -1,0 +1,311 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+@font-face {
+  font-family: 'hastoler';
+  src: url('../fonts/Hastoler Regular.otf')
+  format('opentype');
+}
+
+body {
+	font-family: 'hastoler' !important;
+	font-size: 24px !important;
+}
+
+.page_home {
+	background-image: url('../img/fondo.png') !important;
+	background-color: transparent !important;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.home-title {
+	display: inline-block;
+	vertical-align: top !important;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+
+.home-bottom {
+	position: absolute;
+	left: 0px;
+	top: 65%;
+	z-index: 0;
+}
+.home-bottom img {
+	width: 35%;
+	height: auto;
+}
+
+.home-content {
+	background: #0b1f82;
+	border-radius: 20px;
+	overflow: hidden;
+	width: 80%;
+	margin: auto;
+	text-align: left;
+	margin-top: 2em !important;
+}
+
+.pages-content {
+	background: #0b1f82;
+	border-radius: 20px;
+	overflow: hidden;
+	width: 80%;
+	margin: auto;
+	text-align: left;
+	margin-top: 0em !important;
+	z-index: -1;
+}
+
+.pages-bottom {
+	position: absolute;
+	left: 0px;
+	top: 75%;
+	z-index: 999;
+}
+.pages-bottom img {
+	width: 25%;
+	height: auto;
+}
+
+img.help {
+	width: 15%;
+	height: auto;
+}
+
+.title {
+	text-align: center;
+	font-size: 50px !important;
+}
+.title-app {
+	text-align: center !important;
+	font-size: 30px !important;	
+	margin:auto !important;
+}
+
+input {
+	font-size:24px !important;
+}
+
+.chip {
+	font-size: 18px !important;
+}
+
+input.enter-letters {
+  letter-spacing: .5ch !important;
+  width: 20ch !important;
+  text-transform: uppercase;
+  background-color: lavender !important;
+  border-radius: 20px !important;
+  padding: 5px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+input.enter-char {
+  background: lavender !important;
+  width: 2.3ch !important;
+  float: left !important;
+  margin: 0.1ch !important;
+  text-align:center !important;
+  text-transform: uppercase;
+  border-radius: 5px !important;
+  padding:2px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  font-size:20px !important;
+  
+}
+input.enter-range {
+  background: lavender !important;
+  width: 2.7ch !important;
+  float: left !important;
+  margin: 0.2ch !important;
+  margin-left: 2ch !important;
+  text-align:center !important;
+  text-transform: uppercase;
+  border-radius: 5px !important;
+  padding:2px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  
+}
+
+.marker {
+	margin: 0.5em !important;
+}
+
+.list-block .label {
+	width: 20% !important;
+}
+
+.button {
+	background: #5d77ff;
+	font-size: 24px !important;
+	margin:1em !important;
+	border-radius: 10px;
+	z-index: 999;
+}
+.button.white, p.white, ul.white {
+	color: white !important;
+}
+.button.yellow {
+	color: yellow !important;
+}
+.button.blue {
+	color: lightskyblue !important;
+}
+.button.red {
+	color: lightcoral !important;
+}
+
+.item-content {
+	padding-left:0px !important;
+}
+#btn-submit {
+	width: auto !important;
+	margin-left: 0px !important;
+	background: #0b1f82 !important;
+}
+.navbar-inner {
+	background: #0b1f82 !important;
+	
+}
+
+.list-block .label {
+	font-size: 20px !important;
+	width: 25% !important;
+}
+
+.range-slider {
+	width: 70% !important;
+	float: left !important;
+	margin-right:2em !important;
+  }
+  
+  
+input[type=range] {
+  height: 25px  !important;
+  -webkit-appearance: none  !important;
+  margin: 10px 0 !important;
+}
+input[type=range]:focus {
+  outline: none !important;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 5px !important;
+  cursor: pointer !important;
+  animate: 0.2s !important;
+  box-shadow: 0px 0px 0px #000000 !important;
+  background: lavender !important;
+  border-radius: 1px !important;
+  border: 0px solid #000000 !important;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000 !important;
+  border: 1px solid lavender !important;
+  height: 18px !important;
+  width: 18px !important;
+  border-radius: 25px !important;
+  background: #A1D0FF !important;
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+  margin-top: -7px !important;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: lavender !important;
+}
+input[type=range]::-moz-range-track {
+  width: 100% !important;
+  height: 5px !important;
+  cursor: pointer !important;
+  animate: 0.2s !important;
+  box-shadow: 0px 0px 0px #000000 !important;
+  background: lavender !important;
+  border-radius: 1px !important;
+  border: 0px solid #000000 !important;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000 !important;
+  border: 1px solid lavender !important;
+  height: 18px !important;
+  width: 18px !important;
+  border-radius: 25px !important;
+  background: #A1D0FF !important;
+  cursor: pointer !important;
+}
+input[type=range]::-ms-track {
+  width: 100% !important;
+  height: 5px !important;
+  cursor: pointer !important;
+  animate: 0.2s !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  color: transparent !important;
+}
+input[type=range]::-ms-fill-lower {
+  background: lavender !important;
+  border: 0px solid #000000 !important;
+  border-radius: 2px !important;
+  box-shadow: 0px 0px 0px #000000 !important;
+}
+input[type=range]::-ms-fill-upper {
+  background: lavender !important;
+  border: 0px solid #000000 !important;
+  border-radius: 2px !important;
+  box-shadow: 0px 0px 0px #000000 !important;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px !important;
+  box-shadow: 0px 0px 0px #000000 !important;
+  border: 1px solid lavender !important;
+  height: 18px !important;
+  width: 18px !important;
+  border-radius: 25px !important;
+  background: #A1D0FF !important;
+  cursor: pointer !important;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: lavender !important;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: lavender !important;
+}
+.chip.blue {
+background-color:lavender !important;
+}
+.chip.green {
+	background-color:lightgreen !important;
+}
+p.small, ul.small {
+	font-size:18px !important;
+}
+p.center {
+	text-align:center !important;
+}
+i.size-15 {
+	font-size:15px !important;
+}
+.chip_container {
+	margin:0px !important;
+	padding:0px !important;
+}
+.hidden {
+	display:none !important;
+}

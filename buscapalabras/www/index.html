@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+	
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+	<!-- to avoid the warning of content security policy -->
+	<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">    
+
+    <!-- Your app title -->
+    <title>Buscapalabras</title>
+
+
+	<link rel="stylesheet" href="lib/framework7/css/framework7.material.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/framework7-icons.css">    
+</head>
+
+<body class="theme-blue">
+    <div class="modal-overlay"></div>
+
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main" >
+			<!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        	<div class="pages navbar-fixed toolbar-fixed">
+          		<!-- Page, "data-page" contains page name -->
+          		<div data-page="index" class="page page_home">                	
+                	<div class="page-content">
+                		<div class="content-block">
+                			<div class="home-title">
+                				<div class="row-center">
+                					<div class="col-auto">
+		                				<p class="title">BUSCAPALABRAS</p>
+		                			</div>
+		                		</div>
+		                	</div>
+
+		                	
+		                	<div class="content-block-inner home-content">
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="app.html" class="item-link button white"  data-ignore-cache="true">Empezar</a>
+			 						</div>
+			 					</div>
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="premium.html" class="item-link button yellow"  data-ignore-cache="true">Pasar a premium</a>
+			 						</div>
+			 					</div>
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="ayuda.html" class="item-link button blue"  data-ignore-cache="true">Ayuda</a>
+			 						</div>
+			 					</div>
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="#" class="item-link button red"  id="exit_app">Salir</a>
+			 						</div>
+			 					</div>
+			 					
+			 				</div>
+			 				
+                			 <div class="home-bottom">
+                				<img src='img/icery.png' />
+		                	</div>
+			 				
+		 				</div>
+	 				</div>
+                	
+                	</div>
+          		        
+                </div>
+        	
+            </div>
+        
+        </div>
+
+					               	<div class="popup popup-letras">in popup</div>
+
+  
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/combinaciones.js"></script>
+    <script type="text/javascript" src="js/trie.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+</body>
+
+</html>
