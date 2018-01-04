@@ -15,7 +15,26 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "phonegap-admob": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-multidex": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    }
 }

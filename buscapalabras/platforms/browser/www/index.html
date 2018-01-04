@@ -18,13 +18,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
+    
+	<!-- to avoid the warning of content security policy -->
+	<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">    
 
     <!-- Your app title -->
     <title>Buscapalabras</title>
 
-    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
-        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
 
 	<link rel="stylesheet" href="lib/framework7/css/framework7.material.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.css">
@@ -45,97 +45,64 @@
     <!-- Views -->
     <div class="views">
         <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Top Navbar-->
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">BUSCAPALABRAS</div>
-                </div>
-            </div>
-            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-            <div class="pages navbar-through toolbar-through">
-                <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
-                    <!-- Scrollable page content -->
-                    <div class="page-content">
-						<div class="content-block-title">Buscapalabras</div>
-						
-						
-						<div class="list-block">
-						<form id="form-palabra" class="list-block ajax-submit" method="POST">
-						
-						  <ul>
-						    <!-- Text inputs -->
-						    <li>
-						      <div class="item-content">
-						        <div class="item-inner">
-						          <div class="item-title label ">Letras</div>
-						          <div class="item-input">
-						            <input type="text" name="chars" placeholder="" id="chars" maxlength="7" size="7" class="enter-letters">
-						          </div>
-						        </div>
-						      </div>
-						    </li>
-						    <li>
-						      <div class="item-content">
-						        <div class="item-inner">
-						          <div class="item-title label">Patrón</div>
-						          <div class="item-input">
-						            <input type="text" name="mask1" placeholder="" id="mask1" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask2" placeholder="" id="mask2" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask3" placeholder="" id="mask3" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask4" placeholder="" id="mask4" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask5" placeholder="" id="mask5" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask6" placeholder="" id="mask6" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask7" placeholder="" id="mask7" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask8" placeholder="" id="mask8" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask9" placeholder="" id="mask9" maxlength="1" size="1" class="enter-char" value="">
-						            <input type="text" name="mask10" placeholder="" id="mask10" maxlength="1" size="1" class="enter-char" value="">
-						          </div>
-						        </div>
-						      </div>
-						    </li>
-						    
-						    <li>
-						      <div class="item-content">
-						        <div class="item-inner">
-						          <div class="item-title label">Longitud</div>
-									<div class="item-input">
-									    <div class="range-slider">
-									      <input type="range" min="3" max="10" step="1" value="4" id="longitud">
-									    </div>
-									</div>  
-							      </div>
-								</div>
-						    </li>
-						    
-                    	</ul>
-                    	
-						<div class="content-block">
-						  <input type="submit" value="Enviar" class="button button-big button-fill" id="btn-submit" />
-						</div>                    	
-                    	</form>
-                    	</div>
-                    	                    	
-						<div class="content-block">
-						<div id="chips_container_dict" class="content-block">
-						  <!-- keep it empty -->
-						</div></div>
-						
-						<div class="content-block">
-						<div id="chips_container_possible" class="content-block">
-						  <!-- keep it empty -->
-						</div></div>                    	
-						                    	
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+        <div class="view view-main" >
+			<!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        	<div class="pages navbar-fixed toolbar-fixed">
+          		<!-- Page, "data-page" contains page name -->
+          		<div data-page="index" class="page page_home">                	
+                	<div class="page-content">
+                		<div class="content-block">
+                			<div class="home-title">
+                				<div class="row-center">
+                					<div class="col-auto">
+		                				<p class="title">BUSCAPALABRAS</p>
+		                			</div>
+		                		</div>
+		                	</div>
 
+		                	
+		                	<div class="content-block-inner home-content">
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="app.html" class="item-link button white"  data-ignore-cache="true">Empezar</a>
+			 						</div>
+			 					</div>
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="premium.html" class="item-link button yellow"  data-ignore-cache="true">Pasar a premium</a>
+			 						</div>
+			 					</div>
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="ayuda.html" class="item-link button blue"  data-ignore-cache="true">Ayuda</a>
+			 						</div>
+			 					</div>
+		                		<div class="row-center">
+		                			<div class="col-auto">
+			 							<a href="#" class="item-link button red"  id="exit_app">Salir</a>
+			 						</div>
+			 					</div>
+			 					
+			 				</div>
+			 				
+                			 <div class="home-bottom">
+                				<img src='img/icery.png' />
+		                	</div>
+			 				
+		 				</div>
+	 				</div>
+                	
+                	</div>
+          		        
+                </div>
+        	
+            </div>
+        
+        </div>
+
+					               	<div class="popup popup-letras">in popup</div>
+
+  
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/combinaciones.js"></script>

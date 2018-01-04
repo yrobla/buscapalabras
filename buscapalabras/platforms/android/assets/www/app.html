@@ -1,0 +1,99 @@
+
+<div data-page="app" class="page page_home">
+<div class="navbar">
+    <div class="navbar-inner ">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+        </a>
+      </div>
+      <div class="title title-app">BUSCAPALABRAS</div>
+    </div>
+</div>
+    
+    <!-- Scrollable page content -->
+    <div class="page-content">
+
+                		<div class="content-block">
+
+					<div class="list-block">
+					<form id="form-palabra" class="list-block ajax-submit" method="POST">
+					
+					  <ul>
+					    <!-- Text inputs -->
+					    <li>
+					      <div class="item-content">
+					        <div class="item-inner">
+					          <div class="item-title label ">Letras
+         <a class="link icon-only" href="#" id="popup-letras"><i class="f7-icons size-15 color-black">help</i></a>
+					          
+					          </div>
+					          <div class="item-input">
+					            <input type="text" name="chars" placeholder="" id="chars" maxlength="7" size="7" class="enter-letters">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    
+					    <li>
+					      <div class="item-content">
+					        <div class="item-inner">
+					          <div class="item-title label">Largo
+         <a href="#" class="link icon-only" id="popup-largo"><i class="f7-icons size-15 color-black">help</i></a>
+					          
+					          </div>
+								<div class="item-input">
+								    <div class="range-slider">
+								      <input type="range" min="3" max="10" step="1" value="4" id="longitud"  >
+								    </div>
+								    <input type="text" maxlength="1" size="1" name="outputLongitud" id="outputLongitud" class="enter-range" />
+								</div>  
+						      </div>
+							</div>
+					    </li>
+
+					    <li>
+					      <div class="item-content">
+					        <div class="item-inner">
+					          <div class="item-title label">Patrón
+         <a href="#" class="link icon-only" id="popup-patron"><i class="f7-icons size-15 color-black">help</i></a>
+					          
+					          </div>
+					          <div class="item-input">
+					            <input type="text" name="mask1" placeholder="" id="mask1" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask2" placeholder="" id="mask2" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask3" placeholder="" id="mask3" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask4" placeholder="" id="mask4" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask5" placeholder="" id="mask5" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask6" placeholder="" id="mask6" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask7" placeholder="" id="mask7" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask8" placeholder="" id="mask8" maxlength="1" size="1" class="enter-char" value="">
+					            <input type="text" name="mask9" placeholder="" id="mask9" maxlength="1" size="1" class="enter-char hidden" value="">
+					            <input type="text" name="mask10" placeholder="" id="mask10" maxlength="1" size="1" class="enter-char hidden" value="">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+
+						<li>					    
+					  		<input type="submit" value="Enviar" class="button button-big button-fill" id="btn-submit" />
+					  	</li></ul>
+					              	</form>
+					              	</div>
+					              	                    	
+					<div id="chips_container_dict" class="content-block chip_container">
+					  <!-- keep it empty -->
+					</div>
+					
+					<div id="chips_container_possible" class="content-block chip_container">
+					  <!-- keep it empty -->
+					</div>     
+					
+					                    	
+					              </div>
+					
+
+</div></div>
+
+
+

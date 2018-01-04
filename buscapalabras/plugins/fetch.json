@@ -22,5 +22,45 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-connectivity-monitor": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-connectivity-monitor"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-admobpro": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-admobpro"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-extension": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-extension"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-multidex": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-multidex"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-admob": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-admob@^4.1.16"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
