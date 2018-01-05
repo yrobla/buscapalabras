@@ -8,30 +8,27 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         },
         "cordova-plugin-multidex": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         },
         "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-admob": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-extension": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         },
         "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.miy.buscapalabras"
         }
     }
 }

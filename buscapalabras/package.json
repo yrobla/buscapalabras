@@ -1,5 +1,5 @@
 {
-  "name": "com.phonegap.helloworld",
+  "name": "com.miy.buscapalabras",
   "version": "1.0.0",
   "displayName": "buscapalabras",
   "cordova": {
@@ -9,13 +9,11 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-console": {},
-      "cordova-admob": {},
       "cordova-plugin-admobpro": {}
     }
   },
   "dependencies": {
-    "cordova-admob": "^4.1.16",
-    "cordova-android": "~6.3.0",
+    "cordova-android": "^6.3.0",
     "cordova-plugin-admobpro": "^2.29.29",
     "cordova-plugin-console": "~1.0.1",
     "cordova-plugin-whitelist": "~1.2.0"
