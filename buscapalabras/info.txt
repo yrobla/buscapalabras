@@ -1,3 +1,9 @@
+Node version: v8.9.4
+
+Cordova version: 7.1.0
+
+Config.xml file: 
+
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.miy.buscapalabras" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Buscapalabras</name>
@@ -8,7 +14,6 @@
         MIY apps
     </author>
     <content src="index.html" />
-    <icon src="res/icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -31,3 +36,18 @@
     <plugin name="cordova-plugin-console" spec="~1.0.1" />
     <plugin name="cordova-plugin-admobpro" spec="^2.29.29" />
 </widget>
+
+
+Plugins: 
+
+cordova-connectivity-monitor,cordova-plugin-admobpro,cordova-plugin-console,cordova-plugin-extension,cordova-plugin-multidex,cordova-plugin-statusbar,cordova-plugin-whitelist
+
+Error retrieving Android platform information: 
+Android SDK is not set up properly. Make sure that the Android SDK 'tools' and 'platform-tools' directories are in the PATH variable. 
+
+Error: cmd: Command failed with exit code 1 Error output:
+"android" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+
+
