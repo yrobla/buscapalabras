@@ -120,11 +120,6 @@ document.addEventListener('pageInit', function (e) {
     	$$("#link-minimize").on("click", function() {
     		if (window.plugins.appMinimize) {
     			
-    			// send notification to reopen
-    			myApp.addNotification({
-    				message: 'La app de Buscapalabras se ha minimizado.',
-    				
-    			});
     			window.plugins.appMinimize.minimize();
     			
     		}
