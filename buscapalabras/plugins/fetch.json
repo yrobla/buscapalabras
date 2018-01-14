@@ -1,66 +1,74 @@
 {
-    "cordova-plugin-whitelist": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-whitelist@~1.2.0"
-        },
-        "is_top_level": true,
-        "variables": {}
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@~1.2.0"
     },
-    "cordova-plugin-console": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-console@~1.0.1"
-        },
-        "is_top_level": true,
-        "variables": {}
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-console": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-console@~1.0.1"
     },
-    "cordova-plugin-statusbar": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-statusbar@~1.0.1"
-        },
-        "is_top_level": true,
-        "variables": {}
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-statusbar": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-statusbar@~1.0.1"
     },
-    "cordova-connectivity-monitor": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-connectivity-monitor"
-        },
-        "is_top_level": false,
-        "variables": {}
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-connectivity-monitor": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-connectivity-monitor"
     },
-    "cordova-plugin-admobpro": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-admobpro"
-        },
-        "is_top_level": true,
-        "variables": {}
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-admobpro": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-admobpro"
     },
-    "cordova-plugin-extension": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-extension"
-        },
-        "is_top_level": false,
-        "variables": {}
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-extension": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-extension"
     },
-    "cordova-plugin-multidex": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-multidex"
-        },
-        "is_top_level": true,
-        "variables": {}
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-multidex": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-multidex"
     },
-    "cordova-admob": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-admob@^4.1.16"
-        },
-        "is_top_level": true,
-        "variables": {}
-    }
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-admob": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-admob@^4.1.16"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-appminimize": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-appminimize@^1.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
 }

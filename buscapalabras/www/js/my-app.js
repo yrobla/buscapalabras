@@ -86,31 +86,49 @@ document.addEventListener('pageInit', function (e) {
     	$$('#popup-letras').on('click', function () {
     		myApp.alert('<div class="page-content">Introduce hasta siete letras para formar tu palabra. '+
     				'Introduce <b>?</b> para usar comodines. Necesitarás ser premium o visualizar un anuncio cuando utilices comodines.</div>',
-    				'<div><i class="f7-icons size-22 color-black">help</i>&nbsp;Ayuda</div>');
+    				'<div><img src="img/sign-question-icon.png" alt="ayuda" width=25 />&nbsp;Ayuda</div>');
     		});
     	
     	$$('#popup-largo').on('click', function () {
     		myApp.alert('<div class="page-content">Mueve el slider para seleccionar la longitud de la palabra a generar. '+
     				'La longitud va desde tres caracteres hasta diez. Para longitudes 9 y 10, deberás ser premium o visualizar un anuncio.</div>',
-    				'<div><i class="f7-icons size-22 color-black">help</i>&nbsp;Ayuda</div>');
+    				'<div><img src="img/sign-question-icon.png" alt="ayuda" width=25 />&nbsp;Ayuda</div>');
     		});    	
 
     	$$('#popup-patron').on('click', function () {
     		myApp.alert('<div class="page-content">Introduce letras en la posición que desees para fijar las letras en la palabra a generar. Deja la casilla en blanco si quieres utilizar las letras que has escogido.</div>',
-    				'<div><i class="f7-icons size-22 color-black">help</i>&nbsp;Ayuda</div>');
+    				'<div><img src="img/sign-question-icon.png" alt="ayuda" width=25 />&nbsp;Ayuda</div>');
     		});    	
 
     	$$('#chips_container_dict').on('click', function () {
     		myApp.alert('<div class="page-content">Las palabras que se muestran son válidas y aparecen en nuestro diccionario.</div>',
-    				'<div><i class="f7-icons size-22 color-black">help</i>&nbsp;Ayuda</div>');
+    				'<div><img src="img/sign-question-icon.png" alt="ayuda" width=25 />&nbsp;Ayuda</div>');
     		});    	
 
     	$$('#chips_container_possible').on('click', function () {
     		myApp.alert('<div class="page-content">Estas palabras están generadas mediante reglas gramaticales y pueden no ser válidas.</div>',
-    				'<div><i class="f7-icons size-22 color-black">help</i>&nbsp;Ayuda</div>');
+    				'<div><img src="img/sign-question-icon.png" alt="ayuda" width=25 />&nbsp;Ayuda</div>');
     		});
     	
-
+    	$$("#clear-pattern").on('click', function() {
+    		for (var i=1;i<=10;i++)
+    		{
+    			$$("#mask"+i).val("");
+    		}
+    	});
+    	
+    	$$("#link-minimize").on("click", function() {
+    		if (window.plugins.appMinimize) {
+    			
+    			// send notification to reopen
+    			myApp.addNotification({
+    				message: 'La app de Buscapalabras se ha minimizado.',
+    				
+    			});
+    			window.plugins.appMinimize.minimize();
+    			
+    		}
+    	});
     }
 });
 
@@ -205,7 +223,7 @@ function devuelveResultados() {
 			    			'<div class="chip green"><div class="chip-label">'+ palabra_final + '</div></div>\n';
 			    	}
 			    }				    
-			    $$("#chips_container_dict").html('<a href="#" class="link icon-only" id="popup-confirmadas"><i class="f7-icons size-15 color-black">help</i></a>&nbsp;'+chip_content);
+			    $$("#chips_container_dict").html('<a href="#" class="link icon-only" id="popup-confirmadas"><img src="img/sign-question-icon.png" alt="ayuda" width=20 /></a>&nbsp;'+chip_content);
 			    
 		    	var chip_content = '';
 			    if (data['posibles'].length==0) {
@@ -222,7 +240,7 @@ function devuelveResultados() {
 			    	}
 			    }
 			    
-			    $$("#chips_container_possible").html('<a href="#" class="link icon-only" id="popup-posibles"><i class="f7-icons size-15 color-black">help</i></a>&nbsp;'+chip_content);
+			    $$("#chips_container_possible").html('<a href="#" class="link icon-only" id="popup-posibles"><img src="img/sign-question-icon.png" alt="ayuda" width=25 /></a>&nbsp;'+chip_content);
 			    
 			    myApp.hidePreloader();
 			},

@@ -1,34 +1,37 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-multidex": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
     },
-    "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        },
-        "cordova-plugin-multidex": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        },
-        "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        }
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
     },
-    "dependent_plugins": {
-        "cordova-plugin-extension": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        },
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "com.miy.buscapalabras"
-        }
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
+    },
+    "cordova-plugin-admobpro": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
+    },
+    "cordova-plugin-appminimize": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
+    },
+    "cordova-connectivity-monitor": {
+      "PACKAGE_NAME": "com.miy.buscapalabras"
+    }
+  }
 }
