@@ -145,7 +145,7 @@ document.addEventListener('pageInit', function (e) {
     	});
     	
     	// validamos el form cuando se envia
-    	$$('#form-contact').on('submit', function(e){	
+    	$$('#form-contact').on('submit', function(e){
     	    e.preventDefault();
     	    
     		var motivo = $$("#motivo").val();
