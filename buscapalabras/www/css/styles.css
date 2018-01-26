@@ -118,6 +118,35 @@ input.enter-letters {
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
+
+select.enter-motivo {
+  letter-spacing: .5ch !important;
+  background-color: lavender !important;
+  border-radius: 20px !important;
+  padding: 5px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;	
+}
+
+textarea.enter-detalles {
+  letter-spacing: .5ch !important;
+  background-color: lavender !important;
+  border-radius: 20px !important;
+  padding: 5px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;	
+}
+
+input.enter-email {
+  letter-spacing: .5ch !important;
+  background-color: lavender !important;
+  border-radius: 20px !important;
+  padding: 5px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;	
+  font-size:16px !important;
+}
+
 input.enter-char {
   background: lavender !important;
   width: 2.3ch !important;

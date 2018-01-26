@@ -125,8 +125,74 @@ document.addEventListener('pageInit', function (e) {
     		}
     	});
     }
+    
+    if (page.name === 'contact') {
+    	$$("#motivo").on("change", function() {
+    		switch($$("#motivo").val()) {
+    		case 'sugerir_palabra':
+    			$$("#detalles").attr('placeholder', "Escribe la palabra que quieres sugerir y será añadida a nuestro diccionario si es válida");
+    			break;
+    		case 'informar_bug':
+    			$$("#detalles").attr('placeholder', "Explica el error que has encontrado y intentaremos solucionarlo lo antes posible");
+    			break;
+    		case 'nueva_funcionalidad':
+    			$$("#detalles").attr('placeholder', "¿Echas de menos alguna funcionalidad en la app? Explícanosla e intentaremos hacerla realidad");
+    			break;
+    		case 'otros':
+    			$$("#detalles").attr('placeholder', "Si tienes cualquier otra pregunta, envíanosla. Estaremos encantados de atenderte");
+    			break;
+    		}
+    	});
+    	
+    	// validamos el form cuando se envia
+    	$$('#form-contact').on('submit', function(e){	
+    	    e.preventDefault();
+    	    
+    		var motivo = $$("#motivo").val();
+    		if (motivo.length==0) {
+    			myApp.alert("Debes introducir un motivo válido", 'Error');
+    			return false;
+    	   	}
+    		
+    		var detalles = $$("#detalles").val();
+    		if (detalles.length==0) {
+    			myApp.alert("Debes introducir los detalles de la consulta", 'Error');
+    			return false;
+    			
+    		}
+    		
+    		var email = $$("#email").val();
+    		if (email.length>0) {
+    			// validamos que sea un email
+    		    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    		    if (!re.test(String(email).toLowerCase())) {
+    		    	myApp.alert("Debes introducir un email válido", 'Error');
+    		    	return false;
+    		    }
+    		}
+    		
+    		// enviamos la peticion por ajax
+    		$$.ajax({
+    			url: 'http://buscapalabras.ysoft.biz/contactar',
+    			method: 'POST',
+    			data: {
+    				'subject': motivo,
+    				'content': detalles,
+    				'email': email,
+    			},
+    			dataType: 'text',
+    			success: function(response) {
+    				myApp.alert("La solicitud se ha enviado correctamente. ¡Gracias!", "Contacto enviado");
+    				return true;
+    			},
+    			error: function(xhr, status) {
+    				myApp.alert("Ha ocurrido un error al procesar tu solicitud. Intenta de nuevo", "Error");
+    				return false;
+    			}
+    		})
+    	});
+    }
 });
-
 
 function validarCaracteres() {
 	initResultado();
